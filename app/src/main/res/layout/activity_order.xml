@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cream">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/brown_dark"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_title"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/cream"
+                    android:fontFamily="@font/poppins_bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Isi alamat untuk pengiriman"
+                    android:textSize="14sp"
+                    android:textColor="@color/coffee_foam"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- BODY -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="32dp">
+
+                <!-- SECTION PESANAN -->
+                <LinearLayout
+                    android:id="@+id/sectionPesanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/edittext_bg"
+                    android:padding="16dp"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pesanan Anda"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/brown_dark"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <!-- Gambar menu (BARU - ImageView) -->
+                        <ImageView
+                            android:id="@+id/ivMenuImage"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/menu_kopi_susu"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/image_rounded_bg"
+                            android:clipToOutline="true"
+                            android:layout_marginEnd="12dp"
+                            android:contentDescription="Gambar Menu" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvMenuName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Belum ada menu dipilih"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/brown_dark"
+                                android:fontFamily="@font/poppins_semibold" />
+
+                            <TextView
+                                android:id="@+id/tvMenuPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textSize="13sp"
+                                android:textColor="@color/brown_primary"
+                                android:fontFamily="@font/poppins_bold"
+                                android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 1. Nama Lengkap -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Lengkap"
+                    android:textSize="14sp"
+                    android:textColor="@color/brown_dark"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etNamaLengkap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_nama_lengkap"
+                    android:inputType="textPersonName"
+                    android:background="@drawable/edittext_bg"
+                    android:padding="14dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/brown_dark"
+                    android:textColorHint="@color/gray_medium"
+                    android:fontFamily="@font/poppins_regular" />
+
+                <!-- 2. Kota -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kota"
+                    android:textSize="14sp"
+                    android:textColor="@color/brown_dark"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etKota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Bandung"
+                    android:inputType="text"
+                    android:background="@drawable/edittext_bg"
+                    android:padding="14dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/brown_dark"
+                    android:textColorHint="@color/gray_medium"
+                    android:fontFamily="@font/poppins_regular" />
+
+                <!-- 3. Alamat Lengkap -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat Lengkap"
+                    android:textSize="14sp"
+                    android:textColor="@color/brown_dark"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etAlamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Jl. Contoh No. 123"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"
+                    android:background="@drawable/edittext_bg"
+                    android:padding="14dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/brown_dark"
+                    android:textColorHint="@color/gray_medium"
+                    android:fontFamily="@font/poppins_regular" />
+
+                <!-- 4. Kode Pos -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kode Pos"
+                    android:textSize="14sp"
+                    android:textColor="@color/brown_dark"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etKodePos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="40123"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:background="@drawable/edittext_bg"
+                    android:padding="14dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/brown_dark"
+                    android:textColorHint="@color/gray_medium"
+                    android:fontFamily="@font/poppins_regular" />
+
+                <!-- 5. No. Handphone (HANYA 1X) -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No. Handphone"
+                    android:textSize="14sp"
+                    android:textColor="@color/brown_dark"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etNoHp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="08xxxxxxxxxx"
+                    android:inputType="phone"
+                    android:background="@drawable/edittext_bg"
+                    android:padding="14dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/brown_dark"
+                    android:textColorHint="@color/gray_medium"
+                    android:fontFamily="@font/poppins_regular" />
+
+                <!-- 6. Notes -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notes (Opsional)"
+                    android:textSize="14sp"
+                    android:textColor="@color/brown_dark"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Catatan untuk penjual (misal: tanpa gula, less ice)"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"
+                    android:background="@drawable/edittext_bg"
+                    android:padding="14dp"
+                    android:layout_marginBottom="32dp"
+                    android:textColor="@color/brown_dark"
+                    android:textColorHint="@color/gray_medium"
+                    android:fontFamily="@font/poppins_regular" />
+
+                <!-- Tombol Order -->
+                <Button
+                    android:id="@+id/btnOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_order_now"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_bold"
+                    android:backgroundTint="@color/brown_primary"
+                    android:textColor="@color/white"
+                    android:padding="14dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/brown_primary"
+        app:itemTextColor="@color/brown_dark" />
+
+</LinearLayout>

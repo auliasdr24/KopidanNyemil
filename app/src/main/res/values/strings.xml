@@ -1,0 +1,55 @@
+<resources>
+    <!-- App -->
+    <string name="app_name">Kopi dan Nyemil</string>
+
+    <!-- Welcome -->
+    <string name="welcome_title">Kopi dan Nyemil</string>
+    <string name="welcome_subtitle">Get a taste of your wish</string>
+    <string name="welcome_btn_start">Start now</string>
+
+    <!-- Sign Up Options -->
+    <string name="signup_title">Welcome to Kopi dan Nyemil</string>
+    <string name="signup_subtitle">Silakan pilih untuk melanjutkan</string>
+    <string name="btn_register">Register</string>
+    <string name="btn_login">Login</string>
+
+    <!-- Register -->
+    <string name="register_title">Daftar Akun</string>
+    <string name="hint_nama_lengkap">Nama Lengkap</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_register_now">Register</string>
+    <string name="have_account">Sudah punya akun? Login di sini</string>
+
+    <!-- Login -->
+    <string name="login_title">Masuk Akun</string>
+    <string name="btn_login_now">Login</string>
+    <string name="no_account">Belum punya akun? Register di sini</string>
+
+    <!-- Home -->
+    <string name="home_greeting">Halo, %1$s!</string>
+    <string name="home_menu_title">Makanan</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profil Saya</string>
+    <string name="profile_setting">Profile Setting</string>
+    <string name="btn_save">Save</string>
+
+    <!-- Order -->
+    <string name="order_title">Alamat Pengiriman</string>
+    <string name="hint_alamat">Alamat Lengkap</string>
+    <string name="hint_kota">Kota</string>
+    <string name="hint_kode_pos">Kode Pos</string>
+    <string name="hint_no_hp">No. Handphone</string>
+    <string name="btn_order_now">Order dan Kirim</string>
+
+    <!-- Confirmation -->
+    <string name="confirm_title">Pesanan Diterima</string>
+    <string name="confirm_message">Terima kasih! Pesanan Anda sedang diproses.</string>
+    <string name="btn_ok">Oke</string>
+
+    <!-- Bottom Nav -->
+    <string name="nav_home">Home</string>
+    <string name="nav_order">Order</string>
+    <string name="nav_profile">Profile</string>
+</resources>

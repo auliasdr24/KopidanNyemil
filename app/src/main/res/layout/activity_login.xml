@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <!-- HEADER: Tombol Back + Judul (sejajar horizontal) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp">
+
+            <!-- Tombol Back -->
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@android:drawable/ic_media_previous"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Kembali"
+                android:tint="@color/brown_dark"
+                android:layout_marginEnd="12dp" />
+
+            <!-- Judul Masuk Akun -->
+            <TextView
+                android:id="@+id/tvLoginTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_title"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/brown_dark"
+                android:fontFamily="@font/poppins_bold" />
+        </LinearLayout>
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masuk untuk melanjutkan"
+            android:textSize="14sp"
+            android:textColor="@color/brown_light"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Label Username -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="14sp"
+            android:textColor="@color/brown_dark"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Input Username -->
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_username"
+            android:inputType="text"
+            android:background="@drawable/edittext_bg"
+            android:padding="14dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/brown_dark"
+            android:textColorHint="@color/gray_medium"
+            android:fontFamily="@font/poppins_regular" />
+
+        <!-- Label Password -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="14sp"
+            android:textColor="@color/brown_dark"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Input Password -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:background="@drawable/edittext_bg"
+            android:padding="14dp"
+            android:layout_marginBottom="32dp"
+            android:textColor="@color/brown_dark"
+            android:textColorHint="@color/gray_medium"
+            android:fontFamily="@font/poppins_regular" />
+
+        <!-- Tombol Login -->
+        <Button
+            android:id="@+id/btnLoginNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_login_now"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold"
+            android:backgroundTint="@color/brown_primary"
+            android:textColor="@color/white"
+            android:padding="14dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Link ke Register -->
+        <TextView
+            android:id="@+id/tvNoAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_account"
+            android:textSize="14sp"
+            android:textColor="@color/brown_light"
+            android:fontFamily="@font/poppins_regular"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+</ScrollView>

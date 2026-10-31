@@ -1,0 +1,47 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Style untuk animasi transisi activity -->
+    <style name="Animation.Activity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="Base.Theme.KopidanNyemil" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color (Coklat kopi) -->
+        <item name="colorPrimary">@color/brown_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/brown_dark</item>
+        <item name="colorOnPrimaryContainer">@color/cream</item>
+
+        <!-- Secondary brand color (Karamel) -->
+        <item name="colorSecondary">@color/caramel</item>
+        <item name="colorOnSecondary">@color/brown_dark</item>
+        <item name="colorSecondaryContainer">@color/coffee_foam</item>
+        <item name="colorOnSecondaryContainer">@color/brown_dark</item>
+
+        <!-- Background & Surface (Krem) -->
+        <item name="android:colorBackground">@color/cream</item>
+        <item name="colorOnBackground">@color/brown_dark</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/brown_dark</item>
+
+        <!-- Error -->
+        <item name="colorError">@color/red</item>
+        <item name="colorOnError">@color/white</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/brown_dark</item>
+
+        <!-- Font Poppins -->
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="fontFamily">@font/poppins</item>
+
+        <!-- ANIMASI SLIDE (BARU) -->
+        <item name="android:windowAnimationStyle">@style/Animation.Activity</item>
+    </style>
+
+    <style name="Theme.KopidanNyemil" parent="Base.Theme.KopidanNyemil" />
+</resources>
