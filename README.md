@@ -241,47 +241,22 @@ Aplikasi menggunakan **dummy data** (tanpa database). Untuk mulai menggunakan ap
 
 <table>
   <tr>
-    <td width="50%" align="center">
-      <b>Welcome Page</b><br>
-      <img src="screenshots/welcome.jpeg" width="280">
-    </td>
-    <td width="50%" align="center">
-      <b>Sign Up Page</b><br>
-      <img src="screenshots/signup.jpeg" width="280">
-    </td>
+    <td width="50%" align="center"><b>Welcome Page</b><br><img src="screenshots/1.jpeg" width="280"></td>
+    <td width="50%" align="center"><b>Sign Up Page</b><br><img src="screenshots/2.jpeg" width="280"></td>
   </tr>
   <tr>
-    <td width="50%" align="center">
-      <b>Register Page</b><br>
-      <img src="screenshots/register.jpeg" width="280">
-    </td>
-    <td width="50%" align="center">
-      <b>Login Page</b><br>
-      <img src="screenshots/login.jpeg" width="280">
-    </td>
+    <td width="50%" align="center"><b>Register Page</b><br><img src="screenshots/3.jpeg" width="280"></td>
+    <td width="50%" align="center"><b>Login Page</b><br><img src="screenshots/4.jpeg" width="280"></td>
   </tr>
   <tr>
-    <td width="50%" align="center">
-      <b>Home Page</b><br>
-      <img src="screenshots/home.jpeg" width="280">
-    </td>
-    <td width="50%" align="center">
-      <b>Profile Page</b><br>
-      <img src="screenshots/profile.jpeg" width="280">
-    </td>
+    <td width="50%" align="center"><b>Home Page</b><br><img src="screenshots/5.jpeg" width="280"></td>
+    <td width="50%" align="center"><b>Profile Page</b><br><img src="screenshots/6.jpeg" width="280"></td>
   </tr>
   <tr>
-    <td width="50%" align="center">
-      <b>Order Page</b><br>
-      <img src="screenshots/order.jpeg" width="280">
-    </td>
-    <td width="50%" align="center">
-      <b>Confirmation Page</b><br>
-      <img src="screenshots/confirmation.jpeg" width="280">
-    </td>
+    <td width="50%" align="center"><b>Order Page</b><br><img src="screenshots/7.jpeg" width="280"></td>
+    <td width="50%" align="center"><b>Confirmation Page</b><br><img src="screenshots/8.jpeg" width="280"></td>
   </tr>
 </table>
-
 ---
 
 ## 👤 Author
