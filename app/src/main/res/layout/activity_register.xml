@@ -11,7 +11,7 @@
         android:orientation="vertical"
         android:padding="32dp">
 
-        <!-- HEADER: Tombol Back + Judul (sejajar horizontal) -->
+        <!-- HEADER: Tombol Back + Judul (sejajar) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,7 +20,6 @@
             android:layout_marginBottom="8dp"
             android:layout_marginTop="16dp">
 
-            <!-- Tombol Back -->
             <ImageButton
                 android:id="@+id/btnBack"
                 android:layout_width="36dp"
@@ -31,7 +30,6 @@
                 android:tint="@color/brown_dark"
                 android:layout_marginEnd="12dp" />
 
-            <!-- Judul Daftar Akun (sejajar sama back) -->
             <TextView
                 android:id="@+id/tvRegisterTitle"
                 android:layout_width="wrap_content"
@@ -43,7 +41,6 @@
                 android:fontFamily="@font/poppins_bold" />
         </LinearLayout>
 
-        <!-- Subtitle -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,9 +48,9 @@
             android:textSize="14sp"
             android:textColor="@color/brown_light"
             android:fontFamily="@font/poppins_regular"
-            android:layout_marginBottom="32dp" />
+            android:layout_marginBottom="24dp" />
 
-        <!-- Label Nama Lengkap -->
+        <!-- 1. Nama Lengkap -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -63,7 +60,6 @@
             android:fontFamily="@font/poppins_medium"
             android:layout_marginBottom="8dp" />
 
-        <!-- Input Nama Lengkap -->
         <EditText
             android:id="@+id/etNamaLengkap"
             android:layout_width="match_parent"
@@ -72,12 +68,12 @@
             android:inputType="textPersonName"
             android:background="@drawable/edittext_bg"
             android:padding="14dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="16dp"
             android:textColor="@color/brown_dark"
             android:textColorHint="@color/gray_medium"
             android:fontFamily="@font/poppins_regular" />
 
-        <!-- Label Username -->
+        <!-- 2. Username -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -87,7 +83,6 @@
             android:fontFamily="@font/poppins_medium"
             android:layout_marginBottom="8dp" />
 
-        <!-- Input Username -->
         <EditText
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
@@ -96,34 +91,140 @@
             android:inputType="text"
             android:background="@drawable/edittext_bg"
             android:padding="14dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="16dp"
             android:textColor="@color/brown_dark"
             android:textColorHint="@color/gray_medium"
             android:fontFamily="@font/poppins_regular" />
 
-        <!-- Label Password -->
+        <!-- 3. Email (BARU) -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Password"
+            android:text="Email"
             android:textSize="14sp"
             android:textColor="@color/brown_dark"
             android:fontFamily="@font/poppins_medium"
             android:layout_marginBottom="8dp" />
 
-        <!-- Input Password -->
         <EditText
-            android:id="@+id/etPassword"
+            android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_password"
-            android:inputType="textPassword"
+            android:hint="contoh@email.com"
+            android:inputType="textEmailAddress"
             android:background="@drawable/edittext_bg"
             android:padding="14dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="16dp"
             android:textColor="@color/brown_dark"
             android:textColorHint="@color/gray_medium"
             android:fontFamily="@font/poppins_regular" />
+
+        <!-- 4. No. Handphone (BARU) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No. Handphone"
+            android:textSize="14sp"
+            android:textColor="@color/brown_dark"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etNoHp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="08xxxxxxxxxx"
+            android:inputType="phone"
+            android:background="@drawable/edittext_bg"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/brown_dark"
+            android:textColorHint="@color/gray_medium"
+            android:fontFamily="@font/poppins_regular" />
+
+        <!-- 5. Password + Icon Mata -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password (min 6 karakter)"
+            android:textSize="14sp"
+            android:textColor="@color/brown_dark"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/edittext_bg"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:background="@android:color/transparent"
+                android:textColor="@color/brown_dark"
+                android:textColorHint="@color/gray_medium"
+                android:fontFamily="@font/poppins_regular"
+                android:maxLines="1" />
+
+            <ImageButton
+                android:id="@+id/btnTogglePassword"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_menu_view"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@color/brown_light"
+                android:contentDescription="Show/Hide Password" />
+        </LinearLayout>
+
+        <!-- 6. Konfirmasi Password (BARU) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Konfirmasi Password"
+            android:textSize="14sp"
+            android:textColor="@color/brown_dark"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/edittext_bg"
+            android:padding="14dp"
+            android:layout_marginBottom="24dp">
+
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Ulangi password"
+                android:inputType="textPassword"
+                android:background="@android:color/transparent"
+                android:textColor="@color/brown_dark"
+                android:textColorHint="@color/gray_medium"
+                android:fontFamily="@font/poppins_regular"
+                android:maxLines="1" />
+
+            <ImageButton
+                android:id="@+id/btnToggleConfirmPassword"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_menu_view"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@color/brown_light"
+                android:contentDescription="Show/Hide Password" />
+        </LinearLayout>
 
         <!-- Tombol Register -->
         <Button

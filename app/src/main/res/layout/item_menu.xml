@@ -58,4 +58,15 @@
             android:fontFamily="@font/poppins_bold"
             android:layout_marginTop="4dp" />
     </LinearLayout>
+
+    <!-- Tombol + bulat -->
+    <ImageButton
+        android:id="@+id/btnAdd"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@android:drawable/ic_input_add"
+        android:background="@drawable/btn_circle_bg"
+        android:tint="@color/white"
+        android:layout_marginStart="8dp"
+        android:contentDescription="Tambah ke pesanan" />
 </LinearLayout>

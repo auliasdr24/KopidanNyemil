@@ -51,9 +51,43 @@
                 android:orientation="vertical"
                 android:padding="32dp">
 
-                <!-- SECTION PESANAN -->
+                <!-- Judul Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pesanan Anda"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/brown_dark"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- RecyclerView Cart (ganti section pesanan lama) -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <!-- Empty state kalau cart kosong -->
+                <TextView
+                    android:id="@+id/tvEmptyCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Belum ada menu dipilih. Klik tombol + di halaman Home untuk menambah menu."
+                    android:textSize="14sp"
+                    android:textColor="@color/brown_light"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:padding="24dp"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_marginBottom="16dp"
+                    android:visibility="gone" />
+
+                <!-- RINGKASAN HARGA: Subtotal + Pajak + Biaya Layanan + Total -->
                 <LinearLayout
-                    android:id="@+id/sectionPesanan"
+                    android:id="@+id/sectionTotal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -61,60 +95,121 @@
                     android:padding="16dp"
                     android:layout_marginBottom="24dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Pesanan Anda"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/brown_dark"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:layout_marginBottom="12dp" />
-
+                    <!-- Subtotal -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
 
-                        <!-- Gambar menu (BARU - ImageView) -->
-                        <ImageView
-                            android:id="@+id/ivMenuImage"
-                            android:layout_width="56dp"
-                            android:layout_height="56dp"
-                            android:src="@drawable/menu_kopi_susu"
-                            android:scaleType="centerCrop"
-                            android:background="@drawable/image_rounded_bg"
-                            android:clipToOutline="true"
-                            android:layout_marginEnd="12dp"
-                            android:contentDescription="Gambar Menu" />
-
-                        <LinearLayout
+                        <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:text="Subtotal"
+                            android:textSize="14sp"
+                            android:textColor="@color/brown_dark"
+                            android:fontFamily="@font/poppins_regular" />
 
-                            <TextView
-                                android:id="@+id/tvMenuName"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Belum ada menu dipilih"
-                                android:textSize="14sp"
-                                android:textStyle="bold"
-                                android:textColor="@color/brown_dark"
-                                android:fontFamily="@font/poppins_semibold" />
+                        <TextView
+                            android:id="@+id/tvSubtotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 0"
+                            android:textSize="14sp"
+                            android:textColor="@color/brown_dark"
+                            android:fontFamily="@font/poppins_semibold" />
+                    </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/tvMenuPrice"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="-"
-                                android:textSize="13sp"
-                                android:textColor="@color/brown_primary"
-                                android:fontFamily="@font/poppins_bold"
-                                android:layout_marginTop="2dp" />
-                        </LinearLayout>
+                    <!-- Pajak 5% -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Pajak (5%)"
+                            android:textSize="14sp"
+                            android:textColor="@color/brown_dark"
+                            android:fontFamily="@font/poppins_regular" />
+
+                        <TextView
+                            android:id="@+id/tvOngkir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 0"
+                            android:textSize="14sp"
+                            android:textColor="@color/brown_dark"
+                            android:fontFamily="@font/poppins_semibold" />
+                    </LinearLayout>
+
+                    <!-- Biaya Layanan -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Biaya Layanan"
+                            android:textSize="14sp"
+                            android:textColor="@color/brown_dark"
+                            android:fontFamily="@font/poppins_regular" />
+
+                        <TextView
+                            android:id="@+id/tvService"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 0"
+                            android:textSize="14sp"
+                            android:textColor="@color/brown_dark"
+                            android:fontFamily="@font/poppins_semibold" />
+                    </LinearLayout>
+
+                    <!-- Garis pemisah -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/brown_light"
+                        android:layout_marginVertical="4dp" />
+
+                    <!-- Total Final -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Total"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/brown_dark"
+                            android:fontFamily="@font/poppins_bold" />
+
+                        <TextView
+                            android:id="@+id/tvTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 0"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/brown_primary"
+                            android:fontFamily="@font/poppins_bold" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -212,7 +307,7 @@
                     android:textColorHint="@color/gray_medium"
                     android:fontFamily="@font/poppins_regular" />
 
-                <!-- 5. No. Handphone (HANYA 1X) -->
+                <!-- 5. No. Handphone -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -280,9 +375,11 @@
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/cream"
         app:menu="@menu/bottom_nav_menu"
         app:itemIconTint="@color/brown_primary"
-        app:itemTextColor="@color/brown_dark" />
+        app:itemTextColor="@color/brown_dark"
+        app:itemActiveIndicatorStyle="@style/Widget.App.BottomNavigationView.ActiveIndicator"
+        app:labelVisibilityMode="labeled" />
 
 </LinearLayout>

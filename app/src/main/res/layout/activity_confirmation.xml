@@ -1,65 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/cream"
-    android:gravity="center"
-    android:padding="32dp">
+    android:fillViewport="true">
 
-    <!-- Icon Centang Hijau (lingkaran) -->
     <LinearLayout
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/circle_green_bg"
-        android:gravity="center"
-        android:layout_marginBottom="32dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="✓"
-            android:textSize="60sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:fontFamily="@font/poppins_bold" />
-    </LinearLayout>
-
-    <!-- Judul -->
-    <TextView
-        android:id="@+id/tvConfirmTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/confirm_title"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="@color/brown_dark"
-        android:fontFamily="@font/poppins_bold"
-        android:layout_marginBottom="16dp" />
-
-    <!-- Pesan -->
-    <TextView
-        android:id="@+id/tvConfirmMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/confirm_message"
-        android:textSize="16sp"
-        android:textColor="@color/brown_light"
-        android:fontFamily="@font/poppins_regular"
-        android:textAlignment="center"
-        android:layout_marginBottom="48dp" />
-
-    <!-- Tombol Oke -->
-    <Button
-        android:id="@+id/btnOk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_ok"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/poppins_bold"
-        android:backgroundTint="@color/brown_primary"
-        android:textColor="@color/white"
-        android:padding="14dp" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="32dp">
 
-</LinearLayout>
+        <!-- Icon Centang Hijau -->
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/circle_green_bg"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✓"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_bold" />
+        </LinearLayout>
+
+        <!-- Judul -->
+        <TextView
+            android:id="@+id/tvConfirmTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm_title"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/brown_dark"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Nomor Pesanan -->
+        <TextView
+            android:id="@+id/tvOrderNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No. Pesanan: ORD-20261102-001"
+            android:textSize="14sp"
+            android:textColor="@color/brown_primary"
+            android:fontFamily="@font/poppins_semibold"
+            android:background="@drawable/edittext_bg"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="6dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Estimasi Sampai -->
+        <TextView
+            android:id="@+id/tvEstimasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estimasi sampai: 30-45 menit"
+            android:textSize="14sp"
+            android:textColor="@color/brown_light"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Card Detail Pesanan -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/edittext_bg"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail Pesanan"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/brown_dark"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_marginBottom="12dp" />
+
+            <!-- List item akan di-add secara programmatically -->
+            <LinearLayout
+                android:id="@+id/llOrderItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <!-- Garis pemisah -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/brown_light"
+                android:layout_marginVertical="12dp" />
+
+            <!-- Total -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Pembayaran"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/brown_dark"
+                    android:fontFamily="@font/poppins_semibold" />
+
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/brown_primary"
+                    android:fontFamily="@font/poppins_bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Tombol Pesan Lagi -->
+        <Button
+            android:id="@+id/btnPesanLagi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pesan Lagi"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold"
+            android:backgroundTint="@color/brown_primary"
+            android:textColor="@color/white"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Tombol Selesai -->
+        <Button
+            android:id="@+id/btnSelesai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selesai"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold"
+            android:backgroundTint="@color/caramel"
+            android:textColor="@color/brown_dark"
+            android:padding="14dp" />
+
+    </LinearLayout>
+</ScrollView>

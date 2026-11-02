@@ -1,5 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Style untuk pill indicator di bottom nav -->
+    <style name="Widget.App.BottomNavigationView.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/coffee_foam</item>
+    </style>
+
     <!-- Style untuk animasi transisi activity -->
     <style name="Animation.Activity" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
@@ -39,7 +44,7 @@
         <item name="android:fontFamily">@font/poppins</item>
         <item name="fontFamily">@font/poppins</item>
 
-        <!-- ANIMASI SLIDE (BARU) -->
+        <!-- ANIMASI SLIDE -->
         <item name="android:windowAnimationStyle">@style/Animation.Activity</item>
     </style>
 

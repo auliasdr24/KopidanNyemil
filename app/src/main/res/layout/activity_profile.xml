@@ -27,7 +27,6 @@
                 android:padding="24dp"
                 android:gravity="center_horizontal">
 
-                <!-- Avatar (pakai ImageView) -->
                 <ImageView
                     android:id="@+id/ivAvatar"
                     android:layout_width="100dp"
@@ -51,13 +50,23 @@
                     android:fontFamily="@font/poppins_bold" />
 
                 <TextView
+                    android:id="@+id/tvProfileUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@aulia"
+                    android:textSize="13sp"
+                    android:textColor="@color/caramel"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginTop="2dp" />
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Profile Setting"
                     android:textSize="14sp"
-                    android:textColor="@color/caramel"
+                    android:textColor="@color/coffee_foam"
                     android:fontFamily="@font/poppins_medium"
-                    android:layout_marginTop="4dp" />
+                    android:layout_marginTop="8dp" />
             </LinearLayout>
 
             <!-- BODY -->
@@ -77,6 +86,7 @@
                     android:fontFamily="@font/poppins_semibold"
                     android:layout_marginBottom="20dp" />
 
+                <!-- 1. Nama Lengkap -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -94,11 +104,58 @@
                     android:inputType="textPersonName"
                     android:background="@drawable/edittext_bg"
                     android:padding="14dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/brown_dark"
+                    android:textColorHint="@color/gray_medium"
+                    android:fontFamily="@font/poppins_regular" />
+
+                <!-- 2. Email -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="14sp"
+                    android:textColor="@color/brown_dark"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="contoh@email.com"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edittext_bg"
+                    android:padding="14dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/brown_dark"
+                    android:textColorHint="@color/gray_medium"
+                    android:fontFamily="@font/poppins_regular" />
+
+                <!-- 3. No. Handphone -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No. Handphone"
+                    android:textSize="14sp"
+                    android:textColor="@color/brown_dark"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etNoHp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="08xxxxxxxxxx"
+                    android:inputType="phone"
+                    android:background="@drawable/edittext_bg"
+                    android:padding="14dp"
                     android:layout_marginBottom="32dp"
                     android:textColor="@color/brown_dark"
                     android:textColorHint="@color/gray_medium"
                     android:fontFamily="@font/poppins_regular" />
 
+                <!-- Tombol Save -->
                 <Button
                     android:id="@+id/btnSave"
                     android:layout_width="match_parent"
@@ -112,6 +169,7 @@
                     android:padding="14dp"
                     android:layout_marginBottom="16dp" />
 
+                <!-- Tombol Logout -->
                 <Button
                     android:id="@+id/btnLogout"
                     android:layout_width="match_parent"
@@ -124,6 +182,17 @@
                     android:textColor="@color/brown_dark"
                     android:padding="14dp" />
 
+                <!-- Versi App -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kopi dan Nyemil v1.0"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray_medium"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp" />
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -133,9 +202,11 @@
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/cream"
         app:menu="@menu/bottom_nav_menu"
         app:itemIconTint="@color/brown_primary"
-        app:itemTextColor="@color/brown_dark" />
+        app:itemTextColor="@color/brown_dark"
+        app:itemActiveIndicatorStyle="@style/Widget.App.BottomNavigationView.ActiveIndicator"
+        app:labelVisibilityMode="labeled" />
 
 </LinearLayout>

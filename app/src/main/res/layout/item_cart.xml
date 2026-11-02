@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/edittext_bg"
+    android:padding="12dp"
+    android:layout_marginBottom="10dp"
+    android:gravity="center_vertical">
+
+    <!-- Gambar Menu -->
+    <ImageView
+        android:id="@+id/ivCartImage"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/menu_kopi_susu"
+        android:scaleType="centerCrop"
+        android:background="@drawable/image_rounded_bg"
+        android:clipToOutline="true"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="Gambar Menu" />
+
+    <!-- Info: nama + harga + subtotal -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCartName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kopi Susu Gula Aren"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/brown_dark"
+            android:fontFamily="@font/poppins_semibold"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/tvCartPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 22.000"
+            android:textSize="12sp"
+            android:textColor="@color/brown_light"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/tvCartSubtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subtotal: Rp 22.000"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/brown_primary"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Tombol - / qty / + horizontal -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/edittext_bg"
+        android:padding="4dp">
+
+        <!-- Tombol - (pakai ic_minus vector) -->
+        <ImageButton
+            android:id="@+id/btnMinus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_minus"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/brown_dark"
+            android:contentDescription="Kurang qty" />
+
+        <!-- Angka Qty -->
+        <TextView
+            android:id="@+id/tvCartQty"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/brown_dark"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center" />
+
+        <!-- Tombol + (pakai ic_plus vector) -->
+        <ImageButton
+            android:id="@+id/btnPlus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_plus"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/brown_dark"
+            android:contentDescription="Tambah qty" />
+    </LinearLayout>
+</LinearLayout>
