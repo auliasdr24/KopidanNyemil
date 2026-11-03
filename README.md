@@ -1,6 +1,6 @@
 # ☕ Kopi dan Nyemil
 
-Aplikasi mobile pemesanan kopi dan camilan dengan tema warna hangat (coklat & krem). Dibuat untuk memenuhi **Tugas UTS Pemrograman Aplikasi Mobile (PAM)**.
+Aplikasi mobile pemesanan kopi dan camilan dengan tema warna hangat (coklat & krem). Dibuat untuk memenuhi **Tugas UTS Pengembangan Aplikasi Mobile (PAM)**.
 
 ![Platform](https://img.shields.io/badge/Platform-Android-green) ![Language](https://img.shields.io/badge/Language-Kotlin-orange) ![Min SDK](https://img.shields.io/badge/Min%20SDK-24-blue)
 
