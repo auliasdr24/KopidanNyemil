@@ -263,7 +263,7 @@ Aplikasi menggunakan **dummy data** (tanpa database). Untuk mulai menggunakan ap
 
 - **Nama**: Aulia
 - **GitHub**: [@auliasdr24](https://github.com/auliasdr24)
-- **Mata Kuliah**: Pemrograman Aplikasi Mobile (PAM)
+- **Mata Kuliah**: Pengembangan Aplikasi Mobile (PAM)
 - **Tugas**: UTS
 
 ---
